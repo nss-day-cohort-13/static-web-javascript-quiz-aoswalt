@@ -26,11 +26,11 @@ function buildTree(treeData) {
 }
 
 function enterListener(e) {
-	if(e.keyCode == 13) {
+	if(e.keyCode === 13) {
 		tree();
 	}
 }
 
-document.getElementById("tree-height-input").onkeypress = enterListener;
-document.getElementById("tree-character-input").onkeypress = enterListener;
-document.getElementById("grow-button").onclick = tree;
+document.getElementById("tree-height-input").addEventListener("keypress", enterListener);
+document.getElementById("tree-character-input").addEventListener("keypress", enterListener);
+document.getElementById("grow-button").addEventListener("click", tree);
