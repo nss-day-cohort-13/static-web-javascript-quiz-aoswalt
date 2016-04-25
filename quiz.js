@@ -6,7 +6,10 @@ function tree() {
 }
 
 function buildTree(treeData) {
-	if(treeData.height < 1 || treeData.character.length < 1) return;
+	if(treeData.height < 1 || treeData.character.length < 1) {
+		alert("Height and Character must be specified.");
+		return;
+	}
 
 	var treeString = "";
 	for (var i = 0; i < treeData.height; ++i) {
